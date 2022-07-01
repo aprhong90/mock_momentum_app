@@ -6,3 +6,7 @@ const bgImage = document.createElement("img");
 bgImage.src = `img/${randomImage}`;
 
 document.body.appendChild(bgImage);
+
+//.append accepts Node objects and DOM strings while .appendchild only accepts Node objects.
+//.append(bgImage) & .append("hello")
+//.appendChild(bgImage) only

@@ -4,6 +4,7 @@ const randomImage = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 bgImage.src = `img/${randomImage}`;
+bgImage.alt = "space-related pic";
 
 document.body.appendChild(bgImage);
 

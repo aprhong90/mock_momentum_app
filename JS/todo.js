@@ -4,7 +4,7 @@ const toDoList = document.querySelector("#todo-list");
 
 let toDos = [];
 
-//fundtions
+//functions
 //save todo list in the localStorage
 const saveToDos = () => {
   localStorage.setItem("todos", JSON.stringify(toDos));
@@ -25,7 +25,7 @@ function paintToDo(todo) {
   li.id = todo.id;
   const span = document.createElement("span");
   const btn = document.createElement("button");
-  span.innerText = todo.text;
+  span.innerText = `- ${todo.text}`;
   btn.innerText = "❌";
   btn.addEventListener("click", deleteToDo);
   li.appendChild(span);

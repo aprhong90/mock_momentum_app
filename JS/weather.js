@@ -6,8 +6,8 @@ function onGeoOK(position) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
   fetch(url).then((res) =>
     res.json().then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const cityName = document.querySelector("#weather span:last-child");
+      const weather = document.querySelector("#weather div:first-child");
+      const cityName = document.querySelector("#weather div:last-child");
       weather.innerText = `${data.weather[0].main} / ${data.main.temp}℃`;
       cityName.innerText = `${data.name}`;
     })
